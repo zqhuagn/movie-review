@@ -2,6 +2,52 @@ extends layoutBS
 
 block content
 
+  .login
+  form.form-inline
+    label.sr-only(for="inlineFormInputGroupUsername2") Username
+    .input-group.mb-2.mr-sm-2
+      .input-group-prepend
+        .input-group-text @
+      input#inlineFormInputGroupUsername2.form-control(type="text" placeholder="Username")
+    label.sr-only(for="inlineFormInputName2") Password
+    input#inlineFormInputName2.form-control.mb-2.mr-sm-2(type="text" placeholder="Password")
+
+    .form-check.mb-2.mr-sm-2
+      input#inlineFormCheck.form-check-input(type="checkbox")
+      label.form-check-label(for="inlineFormCheck")
+        | Remember me
+    button.btn.btn-primary.mb-2(type="submit") log in
+
+  .button_signup
+    button(onclick="location.href='/signup'") Sign up
+
+  .ul.nav.nav-pills
+      li.nav-item
+        a.nav-link.active(href="/") Home
+      li.nav-item
+        a.nav-link.active(href="/write") Write reviews
+      li.nav-item
+        a.nav-link.active(href="/read") Read reviews
+
+  .nav.navbar.navbar-light.bg-light
+    form.form-inline
+      input.form-control-mr-sm-2(type="search" placeholder="Search a movie" "aria-label=Search")
+      button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
+
+
   .jumbotron
     h1 Movie Reviews
-    p Best reviews you'll ever find!
+    p Let's share reviews!
+
+
+
+
+  .row
+    .col-6
+      h3 Highest rated
+      ol
+        li Wall E
+    .col-6
+      h3 Most Reviews
+      ol
+        li Ocean's eight

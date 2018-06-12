@@ -6,3 +6,9 @@ body {
 a {
   color: #00B7FF;
 }
+
+.button_signup{
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
