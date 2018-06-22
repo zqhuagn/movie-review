@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1= title
+  h2 Debugging!!
+
+  form(method="post" action="saveReview")
+    h2 Title
+    input(type="text" name="headline")
+    br
+    h2 Content
+    input(type="text" name="content")
+    br
+    input(type="submit" name="saveReview")
+    
+  p User Reviews 
+  form(method="post" action="deleteReview")
+    ol
+      each r in rs 
+        li 
+          input(name="deleteReview" value=r.headline type="checkbox")
+          e #{r.headline} --
+          i #{r.content}
+      input(type="submit" value="Delete checked items")
+        
+    | Title: #{headline}
+    br
+    | Content: #{content}

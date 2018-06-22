@@ -7,8 +7,36 @@ a {
   color: #00B7FF;
 }
 
-.button_signup{
-  display: flex;
-  justify-content:flex-end;
-  align-items: center;
+//.button_signup{
+//  display: flex;
+//  justify-content:flex-end;
+//  align-items: center;
+//}
+
+.jumbotron{
+  background-image: url(/images/movies.jpg);
+  background-size: 1000px 300px;
+  position:relative;
+  top:200px;
+
+}
+
+.ul.nav.nav-tabs{
+  position:relative;
+  top:200px;
+}
+
+.row{
+  position:relative;
+  top:200px;
+}
+
+
+.login{
+  //float:right;
+  position:fixed;
+  width: 250px;
+  height: 200px;
+  top:20px;
+  left:950px;
 }
