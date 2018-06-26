@@ -24,6 +24,8 @@ var reviewRouter = require('./routes/review');
 var readRouter = require('./routes/read');
 var signupRouter = require('./routes/signup');
 */
+var newsRouter = require('./routes/news');
+
 var app = express();
 
 
@@ -49,6 +51,8 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use('/news', newsRouter);
 
 
 // this handles all static routes ...
