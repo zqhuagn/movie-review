@@ -1,0 +1,10 @@
+extends layoutBS
+
+block content
+  whitecontent
+    .jumbotron
+      h1 Cheese Profile
+      p
+        | Welcome #{user.googlename}
+        | with email #{user.googleemail}
+        | You are logged in
