@@ -6,6 +6,7 @@ const
   logger = require('morgan'),
   reviewsController = require('./controllers/reviewsController'),
   usersController = require('./controllers/usersController'),
+  profileController = require('./controllers/profileController');
   session = require("express-session"),
   bodyParser = require("body-parser"),
   User = require( './models/user' ),
@@ -24,8 +25,6 @@ var reviewRouter = require('./routes/review');
 var readRouter = require('./routes/read');
 var signupRouter = require('./routes/signup');
 */
-var newsRouter = require('./routes/news');
-
 var app = express();
 
 
@@ -52,7 +51,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/news', newsRouter);
+//app.use('/news', newsRouter);
 
 
 // this handles all static routes ...

@@ -1,10 +1,10 @@
 extends layoutBS
 
 block content
+  whitecontent
+    h1 Moive Review Users
 
-  h1 Moive Review Users
-
-  ul
-    each u in users
-      li
-        a(href="/users/"+u._id) #{u.googlename}
+    ul
+      each u in users
+        li
+          a(href="/users/"+u._id) #{u.googlename}
