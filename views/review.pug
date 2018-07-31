@@ -16,7 +16,7 @@ block content
       ol
         each r in rs 
           li 
-            input(name="deleteReview" value=r.headline type="checkbox")
+            input(name="dReview" value=r.headline type="checkbox")
             e #{r.headline} --
             i #{r.content}
         input(type="submit" value="Delete checked items")

@@ -130,14 +130,13 @@ app.get('/profile', isLoggedIn, function(req, res) {
     });
 
 //app.use('/', indexRouter);
-app.get('/review', reviewsController.getAllReviews );
+app.get('/review', usersController.attachUser, reviewsController.getAllReviews );
 app.post('/saveReview', isLoggedIn, reviewsController.saveReview);
 app.post('/deleteReview', isLoggedIn, reviewsController.deleteReview);
 
 app.get('/users',usersController.getAllUsers)
 app.get('/users/:id',
         usersController.attachUser,
-        //reviewsController.attachReview,
         usersController.getUser)
 //app.get('/reviewItem/:id',
         // reviewsController.getReviewItem );

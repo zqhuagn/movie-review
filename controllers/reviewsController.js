@@ -81,7 +81,7 @@ exports.saveReview = ( req, res ) => {
 
 exports.deleteReview = (req, res) => {
   console.log("in deleteReview")
-  let reviewName = req.body.deleteReview
+  let reviewName = req.body.dReview
   if (typeof(reviewName)=='string') {
       Review.deleteOne({headline:reviewName})
            .exec()
